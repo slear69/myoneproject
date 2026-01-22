@@ -1,6 +1,10 @@
 import streamlit as st
 
 st.title("anketa")
-text = st.text_input("предмети в училище")
+age = st.number_input("ваведи години")
+name = st.text_input("ваведи име")
 subject = st.selectbox("предмети",
-[text , text , text])
+["математика" , "булгарски език" , "география","компятарно","физика","химия"])
+if st.button("краи"):
+  st.success('готово')
+  st.write("ти си",name,"на",age,"s lobim predmet",subject,)
